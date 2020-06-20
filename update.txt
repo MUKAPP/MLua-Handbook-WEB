@@ -1,0 +1,9 @@
+{最新版本 | 140}
+{最新版本名 | 1.4.0}
+{更新内容 | 1. 优化夜间模式
+2. 优化细节
+3. 去除启动图
+4. 修复特性
+大小：8.85MB}
+{下载链接 | https://cdn.jsdelivr.net/gh/MUKAPP/MPC@master/dl/muk/apk/mluahb140.apk}
+{更新时间 | 2020年2月18日}

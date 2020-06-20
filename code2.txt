@@ -1,0 +1,88 @@
+
+@{统计字符数{@!
+function utfstrlen(str)
+  local len = #str;
+  local left = len;
+  local cnt = 0;
+  local arr={0,0xc0,0xe0,0xf0,0xf8,0xfc};
+  while left ~= 0 do
+    local tmp=string.byte(str,-left);
+    local i=#arr;
+    while arr[i] do
+      if tmp>=arr[i] then left=left-i;break
+        end
+      i=i-1;
+    end
+    cnt=cnt+1;
+  end
+  return cnt;
+end
+}@
+
+@{设置控件字体{@!
+import "android.graphics.Typeface"
+import "java.io.File"
+
+--布局表中调用
+function 字体(t)
+  return Typeface.createFromFile(File(activity.getLuaDir().."/res/"..t..".ttf"))
+end
+
+--栗子:Typeface=字体("Product")
+
+--代码中调用
+function 字体设置(id,t)
+  id.setTypeface(Typeface.createFromFile(File(activity.getLuaDir().."/res/"..t..".ttf")))
+end
+
+--栗子:字体设置(tv,"Product")
+
+--字体需要放在res文件夹下
+
+--QQ 773772682 提供
+}@
+
+@{正则取文件名{@!
+function 取文件名(path)
+  return path:match(".+/(.+)$")
+end
+
+function 取文件名无后缀(path)
+  return path:match(".+/(.+)%..+$")
+end
+
+print(取文件名("/com/mukapp/top/muk.lua"))
+print(取文件名无后缀("/com/mukapp/top/muk.lua"))
+}@
+
+@{自定义Callback{@!
+function SentText(text,callback)
+  xpcall(function()
+    Toast.makeText(activity,text,Toast.LENGTH_SHORT).show()
+    callback(true)
+  end,function()
+    callback(false)
+  end)
+end
+
+SentText("emmmm",function(is)
+  print(is)
+end)
+}@
+
+@{通知图库更新图片{@!
+--方法1 通过广播
+activity.sendBroadcast(Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE,Uri.parse("file://"..图片路径)))
+
+--方法2 MediaScannerConnection
+import "android.media.MediaScannerConnection"
+MediaScannerConnection.scanFile(activity, {File(图片路径).getAbsolutePath()}, nil, nil)
+}@
+
+@{遍历汉字字符串{@!
+a="啊♂啊啊♂"
+
+for i=1 , utf8.len(a) do
+  print(utf8.sub(a,i,i))
+end
+}@

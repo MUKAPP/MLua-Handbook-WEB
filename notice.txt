@@ -1,0 +1,15 @@
+
+{公告}
+
+{关于权限 | 我申请的权限是为了您能够运行代码，请您放心使用•̀.̫•́✧
+（其实如果你不需要调试代码，关掉也没什么问题啦，只有存储权限是必要的。）}
+
+{<tit-s?>推荐}
+
+{<pic-tex-c?>https://image.uisdc.com/wp-content/uploads/2020/01/uisdc-banner-20200123-1.jpg | https://www.uisdc.com/microsoft-font | 免费使用！微软专门为程序员开发了这款等宽字体！}
+
+{<pic-tex-c?>https://image.uisdc.com/wp-content/uploads/2020/02/toolbox-19-colors-conferences-charcoal.jpg | https://www.uisdc.com/toolbox-19-colors-conferences-charcoal | 2020年2月实用设计类工具 21 款大合集}
+
+{<pic-tex-c?>https://image.uisdc.com/wp-content/uploads/2020/02/uisdc-banner-20200212-3.jpg | https://www.uisdc.com/rhyme-assistant | 写文案必备的神网站！你也可以成为押韵王者}
+
+{<pic-tex-c?>https://image.uisdc.com/wp-content/uploads/2020/02/uisdc-banner-20200203-1.jpg | https://www.uisdc.com/qq-and-wechat-input-bar | QQ和微信的输入栏为什么不一样？来看这篇深度分析！}
